@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://vxv8aj3dn70i"]
+
+[ext_resource type="Script" uid="uid://bckpbh5y0gwwx" path="res://Assets/Scripts/speech.gd" id="1_ebrnq"]
+[ext_resource type="Theme" uid="uid://bwlic3kiffsk7" path="res://Assets/cosmetics_and_sound/main_theme.tres" id="1_h2ot1"]
+[ext_resource type="PackedScene" uid="uid://bwknr44yhuwah" path="res://Assets/schenes/Player_choice.tscn" id="2_equd0"]
+
+[node name="Dialog UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_h2ot1")
+script = ExtResource("1_ebrnq")
+
+[node name="ChoicesContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceList" type="VBoxContainer" parent="ChoicesContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Button" parent="ChoicesContainer/ChoiceList" instance=ExtResource("2_equd0")]
+visible = false
+layout_mode = 2
+
+[node name="Speech box" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogLines" type="RichTextLabel" parent="Speech box"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Placeholder Text"
+
+[node name="speaker name" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -190.0
+offset_right = 150.0
+offset_bottom = -140.0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="speaker name"]
+color = Color(0.589096, 0.589096, 0.589096, 1)
+polygon = PackedVector2Array(0, 0, 117, 0, 150, 50, 0, 50)
+
+[node name="SpeakerName" type="Label" parent="speaker name/Polygon2D"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = 9.5
+offset_right = 151.0
+offset_bottom = 40.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Name"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -57.0
+offset_right = -72.0
+offset_bottom = -57.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="WhiteTriangle" type="Polygon2D" parent="Control"]
+polygon = PackedVector2Array(0, 30, 0, 0, 35, 15)

@@ -1,0 +1,33 @@
+[
+	{"speaker": "MC" , "text": "Guess this is the world I will live in from now on."},
+	{"speaker": "MC" ,"text": "*MC glancing around*"},
+	{"speaker": "MC" ,"text": "The Godess could have spawned me in a city, but a forest will do for now"},
+	{"speaker": "MC" ,"text": "... I wonder if this really is a fantasy world"},
+	{"speaker": "MC" ,"text": "This looks like any forest in my old world..."},
+	{"speaker": "MC" ,"text": "*Wolves howl in the distance*"},
+	{"speaker": "MC" ,"text": "I can worry about fantasy later, but first I need some shelter"},
+	{"speaker": "MC" ,"text": "I should probably set up some sort fo camp, it looks like its already getting late"},
+	{"choices": 
+		[
+			{"text": "Build a campfire and improvise a tent", "goto": "build_camp"},
+			{"text": "Just a tent will be enough...", "goto": "build_tent_only"}
+		]
+		},
+	{"anchor": "build_camp"},
+	{"speaker": "MC", "text": "Yeah, I should make sure to stay warm tonight."},
+	{"speaker": "MC", "text": "I have no idea how cold nights are here after all"},
+	{"goto": "post_choice"},
+	{"anchor": "build_tent_only"},
+	{"speaker": "MC", "text": "Just a tent should be fine. How cold could the night be here?"},
+	{"speaker": "Narrator", "text": "MC then built a tent and proceeded to froze to death in the cold night."},
+	{"goto": "heaven"},
+	{"anchor": "post choice"},
+	{"speaker": "Narrator", "text": "First minigame"}
+	
+	
+	
+	
+	
+	
+	
+]
