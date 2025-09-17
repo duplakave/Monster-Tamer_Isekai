@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var mc = %MC
 @onready var dialog_ui = %"Dialog UI"
-
+@onready var background = %Background
 
 
 var dialog_index: int = 0
@@ -36,6 +36,15 @@ func get_anchor_position(anchor: String):
 	
 func process_current_line():
 	var line = dialog_lines[dialog_index] 
+	#location change
+	
+	if line.has("location"):
+		var background_file = "res://Assets/cosmetics_and_sound/background/" + line["location"] + ".png"
+		background.texture = load(background_file)
+		dialog_index += 1
+		process_current_line()
+		return
+	
 	#check for dialog options
 	if line.has("goto"):
 		dialog_index = get_anchor_position(line["goto"])
@@ -45,7 +54,6 @@ func process_current_line():
 		dialog_index += 1
 		process_current_line()
 		return
-	
 	
 	if line.has("choices"):
 		dialog_ui.display_choices(line["choices"])

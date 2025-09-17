@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=4 uid="uid://bwlic3kiffsk7"]
+[gd_resource type="Theme" load_steps=9 format=4 uid="uid://bwlic3kiffsk7"]
 
 [sub_resource type="Image" id="Image_ebrnq"]
 data = {
@@ -1030,6 +1030,8 @@ border_width_left = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlhu2"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dsi5u"]
+
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
@@ -1054,3 +1056,14 @@ Button/styles/focus = SubResource("StyleBoxFlat_k7n8o")
 Button/styles/hover = SubResource("StyleBoxFlat_0ym2s")
 Button/styles/normal = SubResource("StyleBoxFlat_arefi")
 Button/styles/pressed = SubResource("StyleBoxFlat_rlhu2")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 22
+Label/styles/normal = SubResource("StyleBoxEmpty_dsi5u")
+RichTextLabel/font_sizes/normal_font_size = 35

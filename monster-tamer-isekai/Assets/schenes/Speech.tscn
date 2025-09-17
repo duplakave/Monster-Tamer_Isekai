@@ -28,7 +28,6 @@ layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="Button" parent="ChoicesContainer/ChoiceList" instance=ExtResource("2_equd0")]
-visible = false
 layout_mode = 2
 
 [node name="Speech box" type="PanelContainer" parent="."]
@@ -48,7 +47,7 @@ bbcode_enabled = true
 text = "Placeholder Text"
 
 [node name="speaker name" type="PanelContainer" parent="."]
-custom_minimum_size = Vector2(150, 50)
+custom_minimum_size = Vector2(195, 65)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -60,22 +59,16 @@ grow_vertical = 0
 
 [node name="Polygon2D" type="Polygon2D" parent="speaker name"]
 color = Color(0.589096, 0.589096, 0.589096, 1)
-polygon = PackedVector2Array(0, 0, 117, 0, 150, 50, 0, 50)
+polygon = PackedVector2Array(145, 0, 195, 65, 0, 65, 0, 0)
 
 [node name="SpeakerName" type="Label" parent="speaker name/Polygon2D"]
 unique_name_in_owner = true
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
 offset_left = 1.0
-offset_top = 9.5
-offset_right = 151.0
-offset_bottom = 40.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Name"
+offset_top = 24.0
+offset_right = 153.0
+offset_bottom = 55.0
+theme = ExtResource("1_h2ot1")
+text = "Speaker name"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://31btj7jf7np7"
-path="res://.godot/imported/1.jpeg-8b1b6c0c99e33c7d8e35b0f405d5331a.ctex"
+uid="uid://fofwj1ndywd"
+path="res://.godot/imported/godess_placeholder.jpg-f18eee3d95d7dda9f21d89ebec7d04e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/schenes/1.jpeg"
-dest_files=["res://.godot/imported/1.jpeg-8b1b6c0c99e33c7d8e35b0f405d5331a.ctex"]
+source_file="res://Assets/Characters/godess_placeholder.jpg"
+dest_files=["res://.godot/imported/godess_placeholder.jpg-f18eee3d95d7dda9f21d89ebec7d04e5.ctex"]
 
 [params]
 

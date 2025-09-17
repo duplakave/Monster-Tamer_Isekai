@@ -1,12 +1,43 @@
 [
-	{"speaker": "MC" , "text": "Guess this is the world I will live in from now on."},
-	{"speaker": "MC" ,"text": "*MC glancing around*"},
-	{"speaker": "MC" ,"text": "The Godess could have spawned me in a city, but a forest will do for now"},
-	{"speaker": "MC" ,"text": "... I wonder if this really is a fantasy world"},
-	{"speaker": "MC" ,"text": "This looks like any forest in my old world..."},
-	{"speaker": "MC" ,"text": "*Wolves howl in the distance*"},
-	{"speaker": "MC" ,"text": "I can worry about fantasy later, but first I need some shelter"},
-	{"speaker": "MC" ,"text": "I should probably set up some sort fo camp, it looks like its already getting late"},
+	{"anchor": "start"},
+	{"location": "Abyss"},
+	{"speaker": "Angelic voice" , "text": "Welcome to the Abyss"},
+	{"speaker": "Angelic voice" , "text": "You died and were sent here"},
+	{"speaker": "Angelic voice" , "text": "but worry not, you will be sent to the Godess shortly."},
+	{"speaker": "MC", "text": "Wha-"},
+	
+	{"location": "Heaven"},
+	{"speaker": "Godess", "text": "Okay, lets get on with this."},
+	{"speaker": "MC", "text": "Sure..."},
+	{"speaker": "Godess", "text": "Good. You died, but it happened because of my mistake so I am obliged to compensate you."},
+	{"speaker": "MC", "text": "Huh... So you killed me?"},
+	{"speaker": "Godess", "text": "Yes, but I didtn mean to..."},
+	{"speaker": "MC", "text": "I see. So... what can I get as 'compensation'?"},
+	{"speaker": "Godess", "text": "You can be reborn in a fantasy world if you want. You spent a lot of time imagining what it would be like when you were still alive anyway."},
+	{"speaker": "MC", "text": "*thinks*"},
+	{"choices":
+		[
+			{"text": "Sure, send me to a fantasy world", "goto": "Start_adventure"},
+			{"text": "Thanks, but I would rather stay here in heaven", "goto": "refuse_godess_offer"},
+		]
+		},
+		
+	{"anchor": "refuse_godess_offer"},
+	{"speaker": "Godess", "text": "Well, sure, you can stay here. Enjoy your stay in Heaven."},
+	{"goto": "start"},
+	
+	{"anchor": "Start_adventure"},
+	{"speaker": "Godess", "text": "Good, have fun in your new world. I hope I wont see you untill 80-70 years from now."},
+	{"speaker": "Godess", "text": "Also, you will get a cool power to manage life in the other world."},
+	{"speaker": "Godess", "text": "*snaps*"},
+	{"location": "Forest"},
+	{"speaker": "MC", "text": "Thank... you."},
+	{"speaker": "MC", "text": "... Oh! I just got teleported like that?"},
+	{"speaker": "", "text": "*MC glancing around*"},
+	{"speaker": "MC" , "text": "Guess she was really a Godess... and this is the world I will live in."},
+	{"speaker": "MC", "text": "..."},
+	{"speaker": "MC" ,"text": "This forest looks... normal. Is this really is a fantasy world?"},
+	{"speaker": "MC" ,"text": "It doesent matter right now,I should set up some sort fo camp for now."},
 	{"choices": 
 		[
 			{"text": "Build a campfire and improvise a tent", "goto": "build_camp"},

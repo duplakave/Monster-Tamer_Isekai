@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dpgytasbywxb2"]
 
-[ext_resource type="Texture2D" uid="uid://dj6m6j1im2heb" path="res://Assets/Placeholder MC.webp" id="1_pfy4s"]
+[ext_resource type="Texture2D" uid="uid://dj6m6j1im2heb" path="res://Assets/Characters/Placeholder MC.webp" id="1_pfy4s"]
 
 [node name="MC" type="Node2D"]
 

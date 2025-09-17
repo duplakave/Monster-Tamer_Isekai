@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj6m6j1im2heb"
-path="res://.godot/imported/Placeholder MC.webp-72728e7462f4efd44327bbf472c9b326.ctex"
+uid="uid://bfrpq364r44s7"
+path="res://.godot/imported/Heaven.png-d1d0312df9defaacac697ab410dadcd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Placeholder MC.webp"
-dest_files=["res://.godot/imported/Placeholder MC.webp-72728e7462f4efd44327bbf472c9b326.ctex"]
+source_file="res://Assets/cosmetics_and_sound/background/Heaven.png"
+dest_files=["res://.godot/imported/Heaven.png-d1d0312df9defaacac697ab410dadcd3.ctex"]
 
 [params]
 

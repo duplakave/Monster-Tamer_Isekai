@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://coxtll7bdjh6j"]
+
+[ext_resource type="Script" uid="uid://ceyx1p37nuftw" path="res://Assets/Scripts/Main_Schene.gd" id="1_rrvu7"]
+[ext_resource type="Texture2D" path="res://Assets/images/Forest.webp" id="2_ht04b"]
+[ext_resource type="PackedScene" uid="uid://dpgytasbywxb2" path="res://Assets/Characters/MC.tscn" id="3_elkem"]
+[ext_resource type="PackedScene" uid="uid://vxv8aj3dn70i" path="res://Assets/schenes/Speech.tscn" id="4_jvhg2"]
+
+[node name="Forest schene" type="Node2D"]
+script = ExtResource("1_rrvu7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ht04b")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MC" parent="CanvasLayer2/Control" instance=ExtResource("3_elkem")]
+unique_name_in_owner = true
+position = Vector2(0, -153)
+
+[node name="Dialog UI" parent="CanvasLayer2" instance=ExtResource("4_jvhg2")]
+unique_name_in_owner = true

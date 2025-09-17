@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s5a411cbauo5"
-path="res://.godot/imported/Forest.webp-8d9490ffed4138c8394c6c68d17b7ded.ctex"
+uid="uid://dj6m6j1im2heb"
+path="res://.godot/imported/Placeholder MC.webp-a3ec92b8b207f2503310718587184355.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Forest.webp"
-dest_files=["res://.godot/imported/Forest.webp-8d9490ffed4138c8394c6c68d17b7ded.ctex"]
+source_file="res://Assets/Characters/Placeholder MC.webp"
+dest_files=["res://.godot/imported/Placeholder MC.webp-a3ec92b8b207f2503310718587184355.ctex"]
 
 [params]
 
