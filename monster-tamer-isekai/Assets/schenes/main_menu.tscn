@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://bql3byburr8c7"]
+
+[ext_resource type="Theme" uid="uid://bgwc8p8kbdnj3" path="res://Assets/cosmetics_and_sound/Main_menu.tres" id="1_ko6am"]
+[ext_resource type="Theme" uid="uid://b1xp7fsbkdvnj" path="res://Assets/cosmetics_and_sound/Title.tres" id="2_df7ww"]
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ko6am")
+
+[node name="game_title" type="Label" parent="."]
+layout_mode = 2
+offset_left = 314.0
+offset_top = 125.0
+offset_right = 838.0
+offset_bottom = 194.0
+theme = ExtResource("2_df7ww")
+text = "Monster Tamer Isekai"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu_options" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 350)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -94.0
+offset_right = 250.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="play" type="Button" parent="Menu_options"]
+custom_minimum_size = Vector2(235, 0)
+layout_mode = 2
+theme = ExtResource("1_ko6am")
+text = "Play Game"
+
+[node name="Button2" type="Button" parent="Menu_options"]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_ko6am")
+
+[node name="exit" type="Button" parent="Menu_options"]
+layout_mode = 2
+theme = ExtResource("1_ko6am")
+text = "Quit Game
+"

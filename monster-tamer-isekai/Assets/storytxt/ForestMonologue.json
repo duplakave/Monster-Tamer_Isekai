@@ -1,5 +1,5 @@
 [
-	{"anchor": "start"},
+	
 	{"location": "Abyss"},
 	{"speaker": "Angelic voice" , "text": "Welcome to the Abyss"},
 	{"speaker": "Angelic voice" , "text": "You died and were sent here"},
@@ -13,7 +13,9 @@
 	{"speaker": "MC", "text": "Huh... So you killed me?"},
 	{"speaker": "Godess", "text": "Yes, but I didtn mean to..."},
 	{"speaker": "MC", "text": "I see. So... what can I get as 'compensation'?"},
-	{"speaker": "Godess", "text": "You can be reborn in a fantasy world if you want. You spent a lot of time imagining what it would be like when you were still alive anyway."},
+	{"anchor": "start"},
+	{"location": "heaven"},
+	{"speaker": "Godess", "text": "You can be reborn in a fantasy world if you want. You spent a lot of time imagining what it would be like to live in one after all."},
 	{"speaker": "MC", "text": "*thinks*"},
 	{"choices":
 		[
@@ -23,7 +25,11 @@
 		},
 		
 	{"anchor": "refuse_godess_offer"},
-	{"speaker": "Godess", "text": "Well, sure, you can stay here. Enjoy your stay in Heaven."},
+	{"speaker": "Godess", "text": "Well, sure, you can stay here. Enjoy your stay in Heaven then."},
+	{"location": "Abyss"},
+	{"speaker": "Narrator", "text": "MC then spent a blissfull ethernity in heaven."},
+	{"speaker": "Narrator", "text": "Definitely a happy ending, but maybe lets not end his story just yet?"},
+	{"speaker": "Narrator", "text": "Lets try again."},
 	{"goto": "start"},
 	
 	{"anchor": "Start_adventure"},
