@@ -1,6 +1,7 @@
 [
 	
-	{"location": "Abyss"},
+	{"location": "Abyss", "music": "Omnious"},
+	{"speaker": "Narrator", "text": "Like half of isekai stories, MC's also starts with a death. MC died as a result of the mistake of a Godess and now he gains the chance to be sent into a fantasy world and live the life he always dreamed about."},
 	{"speaker": "Angelic voice" , "text": "Welcome to the Abyss"},
 	{"speaker": "Angelic voice" , "text": "You died and were sent here"},
 	{"speaker": "Angelic voice" , "text": "but worry not, you will be sent to the Godess shortly."},
@@ -59,7 +60,8 @@
 	{"speaker": "Narrator", "text": "MC then built a tent and proceeded to froze to death in the cold night."},
 	{"goto": "heaven"},
 	{"anchor": "post choice"},
-	{"speaker": "Narrator", "text": "First minigame"}
+	{"speaker": "Narrator", "text": "First minigame"},
+	{"change_schene": "first_minigame", "transition": "fade"},
 	
 	
 	

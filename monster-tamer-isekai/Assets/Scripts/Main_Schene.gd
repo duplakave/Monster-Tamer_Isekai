@@ -3,6 +3,7 @@ extends Node2D
 @onready var mc = %MC
 @onready var dialog_ui = %"Dialog UI"
 @onready var background = %Background
+@onready var audio_player = %AudioStreamPlayer
 
 
 var dialog_index: int = 0
@@ -37,13 +38,19 @@ func get_anchor_position(anchor: String):
 func process_current_line():
 	var line = dialog_lines[dialog_index] 
 	#location change
-	
+	if line.has("change_schene"):
+		return
+		
+		
+		
+		
 	if line.has("location"):
 		var background_file = "res://Assets/cosmetics_and_sound/background/" + line["location"] + ".png"
 		background.texture = load(background_file)
 		dialog_index += 1
 		process_current_line()
 		return
+		
 	
 	#check for dialog options
 	if line.has("goto"):
@@ -60,6 +67,8 @@ func process_current_line():
 	else:
 		#reading dialog
 		dialog_ui.change_line(line["speaker"], line["text"])
+	
+	
 	
 func load_dialog(file_path):
 	#loading dialog and some error management:

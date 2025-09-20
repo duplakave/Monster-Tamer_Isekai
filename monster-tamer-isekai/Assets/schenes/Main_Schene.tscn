@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dpgytasbywxb2" path="res://Assets/Characters/MC.tscn" id="3_elkem"]
 [ext_resource type="PackedScene" uid="uid://vxv8aj3dn70i" path="res://Assets/schenes/Speech.tscn" id="4_jvhg2"]
 
-[node name="Forest schene" type="Node2D"]
+[node name="Main_schene" type="Node2D"]
 script = ExtResource("1_rrvu7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

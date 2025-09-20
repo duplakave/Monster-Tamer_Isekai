@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxhmd3m2dpqsy"]
+
+[ext_resource type="Script" uid="uid://c1r120b0t1ydp" path="res://Assets/Scripts/schene_manager.gd" id="1_si6ee"]
+[ext_resource type="AudioStream" uid="uid://cvcsu3hcf3yhv" path="res://Assets/cosmetics_and_sound/sounds/Omnious.wav" id="2_ap28j"]
+[ext_resource type="AudioStream" uid="uid://43mo14mxn6fc" path="res://Assets/cosmetics_and_sound/sounds/The Peacefull Village Full.wav" id="3_qejyw"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_si6ee")
+
+[node name="Omnious" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ap28j")
+
+[node name="peaceful_vilage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qejyw")

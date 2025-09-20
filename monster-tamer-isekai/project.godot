@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Monster Tamer Isekai"
-run/main_scene="uid://coxtll7bdjh6j"
+run/main_scene="uid://bql3byburr8c7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ScheneManager="*res://Assets/Scripts/schene_manager.gd"
 
 [editor_plugins]
 
