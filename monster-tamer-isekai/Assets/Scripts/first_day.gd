@@ -3,18 +3,20 @@ extends Node2D
 @onready var mc = %MC
 @onready var dialog_ui = %"Dialog UI"
 @onready var background = %Background
-@onready var audio_player = %AudioStreamPlayer
+#@onready var audio_player = %AudioStreamPlayer
 
-
+var dialog_file: String = ("res://Assets/storytxt/first_schene.json")
+var transition_effect: String = "fade"
 var dialog_index: int = 0
-
 var dialog_lines: Array = []
 
 func _ready():
-	dialog_lines = load_dialog("res://Assets/storytxt/ForestMonologue.json")
-	dialog_index = 0
-	process_current_line()
+	dialog_lines = load_dialog(dialog_file)
 	dialog_ui.choice_selected.connect(on_choice_selected)
+	ScheneManager.transition_out_completed.connect(_on_transition_out_completed)
+	ScheneManager.transition_in_completed.connect(_on_transition_in_completed)
+	dialog_index = 0
+	ScheneManager.transition_in_completed()
 
 func _input(event):
 	var line = dialog_lines[dialog_index]
@@ -39,10 +41,11 @@ func process_current_line():
 	var line = dialog_lines[dialog_index] 
 	#location change
 	if line.has("change_schene"):
+		var next_schene = line["next_schene"]
+		dialog_lines = "res://Assets/storytxt/" + next_schene + ".json"
+		transition_effect = line.get("transition", "fade")
+		ScheneManager.transition_out(transition_effect)
 		return
-		
-		
-		
 		
 	if line.has("location"):
 		var background_file = "res://Assets/cosmetics_and_sound/background/" + line["location"] + ".png"
@@ -89,4 +92,18 @@ func load_dialog(file_path):
 
 func on_choice_selected(anchor: String):
 	dialog_index = get_anchor_position(anchor)
+	process_current_line()
+
+func _on_transition_out_completed():
+	if !dialog_file.is_empty():
+		dialog_lines = load_dialog(dialog_lines)
+		dialog_index = 0
+		var first_line = dialog_lines[dialog_index]
+		if first_line.has("location"):
+			background.texture = load("res://Assets/cosmetics_and_sounds/background/" + first_line["location"] + ".png")
+			dialog_index += 1
+		ScheneManager.transition_in(transition_effect)
+	else:
+		print("END")
+func _on_transition_in_completed():
 	process_current_line()

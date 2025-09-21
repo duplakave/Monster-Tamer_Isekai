@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://coxtll7bdjh6j"]
+
+[ext_resource type="Script" uid="uid://ceyx1p37nuftw" path="res://Assets/Scripts/first_day.gd" id="1_ct307"]
+[ext_resource type="PackedScene" uid="uid://vxv8aj3dn70i" path="res://Assets/schenes/Speech.tscn" id="2_nlhxc"]
+[ext_resource type="PackedScene" uid="uid://dpgytasbywxb2" path="res://Assets/Characters/MC.tscn" id="3_s58oi"]
+
+[node name="Main_schene" type="Node2D"]
+script = ExtResource("1_ct307")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_priority = 1
+process_physics_priority = 1
+layer = 0
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialog_ui_placement" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Dialog UI" parent="Dialog_ui_placement" instance=ExtResource("2_nlhxc")]
+unique_name_in_owner = true
+
+[node name="Right_character" type="CanvasLayer" parent="."]
+
+[node name="Control2" type="Control" parent="Right_character"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Left_character" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="Left_character"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="MC" parent="Left_character" instance=ExtResource("3_s58oi")]
+unique_name_in_owner = true
+position = Vector2(158, 346)
