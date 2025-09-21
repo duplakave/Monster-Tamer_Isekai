@@ -16,7 +16,8 @@ func _ready():
 	ScheneManager.transition_out_completed.connect(_on_transition_out_completed)
 	ScheneManager.transition_in_completed.connect(_on_transition_in_completed)
 	dialog_index = 0
-	ScheneManager.transition_in_completed()
+	ScheneManager.transition_in_completed
+	
 
 func _input(event):
 	var line = dialog_lines[dialog_index]
@@ -41,7 +42,7 @@ func process_current_line():
 	var line = dialog_lines[dialog_index] 
 	#location change
 	if line.has("change_schene"):
-		var next_schene = line["next_schene"]
+		var next_schene = line["change_schene"]
 		dialog_lines = "res://Assets/storytxt/" + next_schene + ".json"
 		transition_effect = line.get("transition", "fade")
 		ScheneManager.transition_out(transition_effect)
@@ -102,7 +103,7 @@ func _on_transition_out_completed():
 		if first_line.has("location"):
 			background.texture = load("res://Assets/cosmetics_and_sounds/background/" + first_line["location"] + ".png")
 			dialog_index += 1
-		ScheneManager.transition_in(transition_effect)
+		ScheneManager.transition_in(transition_effect) 
 	else:
 		print("END")
 func _on_transition_in_completed():

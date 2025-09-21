@@ -23,15 +23,15 @@ func transition_out(effect: String = "fade"):
 	match effect:
 		"fade":
 			fade_out()
-		_:
-			fade_out()
+		#_:
+		#	fade_out()
 			
 func transition_in(effect: String = "fade"):
 	match effect:
 		"fade":
 			fade_in()
-		_:
-			fade_in()
+		#_:
+		#	fade_in()
 			
 func fade_out():
 	transition_rect.position = Vector2.ZERO
@@ -42,6 +42,7 @@ func fade_out():
 	var tween = create_tween()
 	tween.tween_property(transition_rect, "modulate:a", 1.0, transition_time)
 	tween.tween_callback(func():
+		#transition_rect.visible = true
 		transition_out_completed.emit()
 		)
 	
@@ -53,12 +54,14 @@ func fade_in():
 	var tween =create_tween()
 	tween.tween_property(transition_rect, "modulate:a", 0.0, transition_time)
 	tween.tween_callback(func():
-		transition_rect.visible = false 
-		transition_out_completed.emit()
+		transition_rect.visible = false
+		transition_in_completed.emit()
 		)
 	
 func change_schene(path: String):
 	get_tree().change_scene_to_file(path)
-	
+
+#func transition_in_completed():
+#	tramsition_re
 	
 	 
